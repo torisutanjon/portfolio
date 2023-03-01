@@ -256,7 +256,7 @@ export const LandingPage = () => {
               <li>Exchange Rate API</li>
             </ul>
             <a
-              href="https://github.com/torisutanjon/nft-ecommerce"
+              href="https://github.com/torisutanjon/exchangerate"
               className="text-[#FFA500] text-[14px] font-bold mt-[50px] move_r sm:mx-auto"
             >
               Click Here to View
