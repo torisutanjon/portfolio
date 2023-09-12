@@ -50,7 +50,7 @@ const Projects = () => {
         demo="https://tristanjohngirao-teslawebsiteclone.netlify.app/"
         title="Tesla Website Clone"
         description="Trying to clone the Tesla Website."
-        techs={[icons.vite, icons.typescript, icons.tailwind]}
+        techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
       <Project
         index={3}
@@ -59,7 +59,7 @@ const Projects = () => {
         demo="https://tristanjohngirao-spacexwebsiteclone.vercel.app/"
         title="SpaceX Website Clone"
         description="Trying to clone the Spacex Website."
-        techs={[icons.vite, icons.typescript, icons.tailwind]}
+        techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
       <Project
         index={4}
@@ -68,7 +68,7 @@ const Projects = () => {
         demo="https://tristanjohngirao-starlinkwebsiteclone.vercel.app/"
         title="Starlink Website Clone"
         description="Trying to clone the Starlink Website."
-        techs={[icons.vite, icons.typescript, icons.tailwind]}
+        techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
     </section>
   );
