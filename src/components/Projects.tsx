@@ -11,7 +11,7 @@ const Projects = () => {
       ref={(el) => setSectionRef("projects", el)}
     >
       <p className="relative text-2xl font-bold mt-24 md:text-3xl lg:mt-48 lg:text-4xl">
-        What have I <span className="text-orange">done</span> ?
+        What I have <span className="text-orange">done</span> ?
       </p>
       <Project
         index={0}
