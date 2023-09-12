@@ -8,6 +8,7 @@ import {
   Footer,
 } from "./components";
 import { useThemeContext } from "./Hooks";
+import { NavigateSectionProvider } from "./Context/NavigateSectionProvider";
 
 function App() {
   const { isDark } = useThemeContext();
@@ -15,14 +16,16 @@ function App() {
     <main
       className={`absolute top-0 left-0 h-full w-full ${isDark ? "dark" : ""} `}
     >
-      <Container>
-        <Landing />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
-      </Container>
+      <NavigateSectionProvider>
+        <Container>
+          <Landing />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+          <Footer />
+        </Container>
+      </NavigateSectionProvider>
     </main>
   );
 }

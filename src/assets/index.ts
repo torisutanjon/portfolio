@@ -28,3 +28,5 @@ export { default as darkX } from "./dark-x.png";
 export { default as linkedin } from "./linkedin.png";
 export { default as lightMode } from "./light-mode.png";
 export { default as darkMode } from "./dark-mode.png";
+export { default as resume } from "./resume.pdf";
+export { default as download } from "./download.png";

@@ -1,12 +1,16 @@
 import { Project } from "./Project";
 import * as icons from "../assets";
-import { useThemeContext } from "../Hooks";
+import { useThemeContext, useNavigateSection } from "../Hooks";
 
 const Projects = () => {
   const { isDark } = useThemeContext();
+  const { setSectionRef } = useNavigateSection();
   return (
-    <div className="relative w-full flex flex-col items-center justify-center">
-      <p className="relative text-2xl font-bold mt-24 md:text-3xl">
+    <section
+      className="relative w-full flex flex-col items-center justify-center"
+      ref={(el) => setSectionRef("projects", el)}
+    >
+      <p className="relative text-2xl font-bold mt-24 md:text-3xl lg:mt-48 lg:text-4xl">
         What have I <span className="text-orange">done</span> ?
       </p>
       <Project
@@ -66,7 +70,7 @@ const Projects = () => {
         description="Trying to clone the Starlink Website."
         techs={[icons.vite, icons.typescript, icons.tailwind]}
       />
-    </div>
+    </section>
   );
 };
 

@@ -1,9 +1,9 @@
 import * as icons from "../assets";
-import { useThemeContext } from "../Hooks";
+import { useThemeContext, useNavigateSection } from "../Hooks";
 
 const Skills = () => {
   const { isDark } = useThemeContext();
-
+  const { setSectionRef } = useNavigateSection();
   const technologies = [
     { image: icons.html5, title: "HTML 5" },
     { image: icons.css3, title: "CSS 3" },
@@ -23,12 +23,15 @@ const Skills = () => {
   ];
 
   return (
-    <div className="relative w-full flex flex-col items-center">
-      <p className="text-2xl font-bold mt-24 md:text-3xl">
+    <section
+      className="relative w-full flex flex-col items-center"
+      ref={(el) => setSectionRef("skills", el)}
+    >
+      <p className="text-2xl font-bold mt-24 md:text-3xl lg:mt-48 lg:text-4xl">
         What do I <span className="text-orange">know</span> ?
       </p>
       <p className="mt-8 md:text-lg">I use these on my projects:</p>
-      <div className="w-4/6 grid grid-cols-4 mt-4 md:mt-12 md:grid-cols-5">
+      <div className="w-4/6 grid grid-cols-4 mt-4 md:mt-12 md:grid-cols-5 lg:w-1/2">
         {technologies.map((tech, key) => {
           return (
             <div
@@ -45,7 +48,7 @@ const Skills = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

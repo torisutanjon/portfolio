@@ -1,88 +1,124 @@
 // import { useEffect, useState } from "react";
 import { useThemeContext } from "../Hooks";
-import {
-  profile,
-  facebook,
-  gmail,
-  lightGithub,
-  darkGithub,
-  lightX,
-  darkX,
-  linkedin,
-  lightMode,
-  darkMode,
-} from "../assets";
+import * as icons from "../assets";
+import { useNavigateSection } from "../Hooks";
 
 const Landing = () => {
   const { isDark, setIsDark } = useThemeContext();
-  // const [text, setText] = useState("");
-  // const [index, setIndex] = useState(0);
+  const { setSectionRef, navList, onClick } = useNavigateSection();
 
-  // useEffect(() => {
-  //   const textToDisplay = "Web Developer";
-  //   if (index < textToDisplay.length) {
-  //     const timeOut = setTimeout(() => {
-  //       setText((prevText) => prevText + textToDisplay.charAt(index));
-  //       setIndex((prevIndex) => prevIndex + 1);
-  //     }, 200);
-  //     return () => clearTimeout(timeOut);
-  //   } else {
-  //     const timeOut = setTimeout(() => {
-  //       setText((prevText) => prevText.substring(0, prevText.length - 1));
-  //     }, 200);
-  //     return () => clearTimeout(timeOut);
-  //   }
-  // }, [text, index]);
+  const clipboard = () => {
+    navigator.clipboard.writeText("giraotristan@gmail.com");
+    window.alert("giraotristan@gmail.com is copied to clipboard");
+  };
 
   return (
-    <div className="relative h-screen w-full flex flex-col items-center justify-center">
+    <section
+      className="relative h-screen w-full flex flex-col items-center justify-center"
+      ref={(el) => setSectionRef("home", el)}
+    >
+      <div className="absolute top-0 left-0 h-12 w-full">
+        <div className="absolute right-12 h-full w-96 flex-row items-center justify-between text-sm hidden lg:flex">
+          {navList.map((nav, key) => {
+            return (
+              <p
+                key={key}
+                className="cursor-pointer"
+                onClick={() => onClick(nav.id)}
+              >
+                {nav.name}
+              </p>
+            );
+          })}
+          <button
+            className="h-5 w-5 flex items-center justify-center rounded-full border-[1px] border-lightPrimary"
+            onClick={() => setIsDark((prevState) => !prevState)}
+          >
+            <img
+              src={isDark ? icons.lightMode : icons.darkMode}
+              alt=""
+              className="relative h-full w-full"
+            />
+          </button>
+        </div>
+      </div>
       <button
         className="absolute top-4 right-4 h-7 w-7 flex items-center justify-center rounded-full border-[1px] border-lightPrimary lg:hidden"
         onClick={() => setIsDark((prevState) => !prevState)}
       >
         <img
-          src={isDark ? lightMode : darkMode}
+          src={isDark ? icons.lightMode : icons.darkMode}
           alt=""
           className="relative h-full w-full"
         />
       </button>
-      <img
-        src={profile}
-        alt=""
-        className="relative h-40 w-40 rounded-full md:h-48 md:w-48"
-      />
-      <p className="text-xl mt-8 md:text-2xl">I'm Tristan John P. Girao</p>
-      <div className="w-full flex flex-row items-center justify-center mt-4">
-        <a href="">
-          <img src={facebook} alt="" className="relative h-5 w-5 mx-2" />
-        </a>
-        <a href="">
-          <img src={gmail} alt="" className="relative h-5 w-5 mx-2" />
-        </a>
-        <a href="">
-          <img
-            src={isDark ? darkGithub : lightGithub}
-            alt=""
-            className="relative h-5 w-5 mx-2"
-          />
-        </a>
-        <a href="">
-          <img
-            src={isDark ? darkX : lightX}
-            alt=""
-            className="relative h-5 w-5 mx-2"
-          />
-        </a>
-        <a href="">
-          <img src={linkedin} alt="" className="relative h-5 w-5 mx-2" />
+      <div className="relative flex flex-row items-center justify-center lg:w-3/4 xl:w-1/2">
+        <img
+          src={icons.profile}
+          alt=""
+          className="relative h-40 w-40 rounded-full md:h-48 md:w-48 lg:h-64 lg:w-64"
+        />
+        <a
+          href={icons.resume}
+          download={"Tristan John Girao Resume"}
+          className="absolute right-0 h-10 w-48 items-center justify-center bg-green-700 text-white hidden rounded-md text-sm cursor-pointer lg:flex"
+        >
+          Download My Resume
         </a>
       </div>
-      <p className="mt-4 md:text-lg">Freelance</p>
+
+      <p className="text-xl mt-8 md:text-2xl lg:text-3xl">
+        I'm Tristan John P. Girao
+      </p>
+      <div className="w-full flex flex-row items-center justify-center mt-4">
+        <a href="https://www.facebook.com/tristanjohn.girao">
+          <img
+            src={icons.facebook}
+            alt=""
+            className="relative h-5 w-5 mx-2 lg:h-6 lg:w-6"
+          />
+        </a>
+        <img
+          src={icons.gmail}
+          alt=""
+          className="relative h-5 w-5 mx-2 cursor-pointer lg:h-6 lg:w-6"
+          onClick={() => clipboard()}
+        />
+        <a href="https://github.com/torisutanjon?tab=repositories">
+          <img
+            src={isDark ? icons.darkGithub : icons.lightGithub}
+            alt=""
+            className="relative h-5 w-5 mx-2 lg:h-6 lg:w-6"
+          />
+        </a>
+        <a href="https://twitter.com/GiraoJ4nj4n">
+          <img
+            src={isDark ? icons.darkX : icons.lightX}
+            alt=""
+            className="relative h-5 w-5 mx-2 lg:h-6 lg:w-6"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/tristan-john-girao-69521a201/">
+          <img
+            src={icons.linkedin}
+            alt=""
+            className="relative h-5 w-5 mx-2 lg:h-6 lg:w-6"
+          />
+        </a>
+      </div>
+      <p className="mt-4 md:text-lg lg:text-xl">Freelance</p>
       <span>
         {/* <p className="text-[orange]">{text}</p> */}
-        <p className="text-[orange] md:text-lg">Web Developer</p>
+        <p className="text-[orange] md:text-lg xl:text-xl">Web Developer</p>
       </span>
-    </div>
+      <a
+        href={icons.resume}
+        download={"Tristan John Girao Resume"}
+        className="mt-4 h-10 w-10 rounded-md bg-green-700 flex items-center justify-center lg:hidden"
+      >
+        <img src={icons.download} alt="" className="relative h-6 w-6" />
+      </a>
+    </section>
   );
 };
 
