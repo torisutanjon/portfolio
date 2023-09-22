@@ -23,8 +23,6 @@ export { default as spacex } from "./spacex-site.png";
 export { default as starlink } from "./starlink-site.png";
 export { default as facebook } from "./facebook.png";
 export { default as gmail } from "./gmail.png";
-export { default as lightX } from "./light-x.png";
-export { default as darkX } from "./dark-x.png";
 export { default as linkedin } from "./linkedin.png";
 export { default as lightMode } from "./light-mode.png";
 export { default as darkMode } from "./dark-mode.png";

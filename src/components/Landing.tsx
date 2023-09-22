@@ -91,13 +91,6 @@ const Landing = () => {
             className="relative h-5 w-5 mx-2 lg:h-6 lg:w-6"
           />
         </a>
-        <a href="https://twitter.com/GiraoJ4nj4n">
-          <img
-            src={isDark ? icons.darkX : icons.lightX}
-            alt=""
-            className="relative h-5 w-5 mx-2 lg:h-6 lg:w-6"
-          />
-        </a>
         <a href="https://www.linkedin.com/in/tristan-john-girao-69521a201/">
           <img
             src={icons.linkedin}
