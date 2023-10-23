@@ -14,8 +14,7 @@ const About = () => {
       <p className="mt-12 mx-12 text-center leading-loose mb-4 md:mx-48 md:text-lg lg:mx-96">
         A self taught web developer and graduated with a degree in Bachelor’s of
         Science in Computer Science. Engaged in freelancing for almost a year by
-        now and have done various of projects ranging from full stack web
-        applications to mobile applications.
+        now and have done various full stack web application projects.
       </p>
     </section>
   );
