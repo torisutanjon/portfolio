@@ -41,21 +41,6 @@ const Projects = () => {
         techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
       <Project
-        index={0}
-        image={icons.chatApp}
-        repo="https://github.com/torisutanjon/chat-app"
-        title="Chat Application"
-        description="A chat application utilizing capability of Socket.io to make a  make bi-directional communication between a client and the server."
-        techs={[
-          isDark ? icons.darkNext : icons.lightNext,
-          icons.expressJS,
-          icons.nodejs,
-          icons.mongodb,
-          icons.typescript,
-          icons.tailwind,
-        ]}
-      />
-      <Project
         index={1}
         image={icons.todoApp}
         repo="https://github.com/torisutanjon/todo-app-t3"
@@ -65,6 +50,21 @@ const Projects = () => {
         techs={[
           isDark ? icons.darkNext : icons.lightNext,
           icons.t3Stack,
+          icons.mongodb,
+          icons.typescript,
+          icons.tailwind,
+        ]}
+      />
+      <Project
+        index={0}
+        image={icons.chatApp}
+        repo="https://github.com/torisutanjon/chat-app"
+        title="Chat Application"
+        description="A chat application utilizing capability of Socket.io to make a  make bi-directional communication between a client and the server."
+        techs={[
+          isDark ? icons.darkNext : icons.lightNext,
+          icons.expressJS,
+          icons.nodejs,
           icons.mongodb,
           icons.typescript,
           icons.tailwind,
