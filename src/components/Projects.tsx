@@ -14,7 +14,7 @@ const Projects = () => {
         What I have <span className="text-orange">done</span> ?
       </p>
       <Project
-        index={1}
+        index={0}
         image={icons.tesla}
         repo="https://github.com/torisutanjon/tesla-website-clone"
         demo="https://tristanjohngirao-teslawebsiteclone.netlify.app/"
@@ -23,7 +23,7 @@ const Projects = () => {
         techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
       <Project
-        index={2}
+        index={1}
         image={icons.spacex}
         repo="https://github.com/torisutanjon/spacex_website_clone"
         demo="https://tristanjohngirao-spacexwebsiteclone.vercel.app/"
@@ -32,7 +32,7 @@ const Projects = () => {
         techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
       <Project
-        index={3}
+        index={2}
         image={icons.starlink}
         repo="https://github.com/torisutanjon/starlink-website-clone"
         demo="https://tristanjohngirao-starlinkwebsiteclone.vercel.app/"
@@ -41,7 +41,7 @@ const Projects = () => {
         techs={[icons.vite, icons.react, icons.typescript, icons.tailwind]}
       />
       <Project
-        index={4}
+        index={3}
         image={icons.todoApp}
         repo="https://github.com/torisutanjon/todo-app-t3"
         demo="https://tristanjohngirao-todoappt3.vercel.app/"
@@ -56,7 +56,7 @@ const Projects = () => {
         ]}
       />
       <Project
-        index={5}
+        index={4}
         image={icons.chatApp}
         repo="https://github.com/torisutanjon/updated-chat-app"
         title="Chat Application"
